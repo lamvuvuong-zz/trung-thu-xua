@@ -1,0 +1,145 @@
+$color_white: #fff;
+$color_primary: #faa92d;
+$color_dark: #d1d3d4;
+
+body {
+	box-sizing: border-box;
+	font-size: 14px;
+	.navbar {
+		border-bottom: 1px solid $color_dark;
+		background-color: $color_white;
+		.navbar-logo {
+			display: inline-block;
+			position: absolute;
+			left: 50%;
+			top: 5px;
+			transform: translateX(-50%);
+			height: 46px;
+			img {
+				height: 100%;
+			}
+		}
+		.navbar-brand {
+			&:active, &:focus, &:hover {
+				outline: 0;
+				color: $color_primary;
+			}
+		}
+		.navbar-toggler {
+			cursor: pointer;
+			outline: 0;
+			box-shadow: 0 0 0 0 transparent;
+			background-color: $color_primary;
+			border-color: transparent;
+			.navbar-toggler-icon {
+				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='" + $color_white + "' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+			}
+		}
+	}
+	.btn-primary {
+		background-color: $color_primary;
+		border-color: $color_primary;
+		&:active, &:focus, &:hover {
+			background-color: $color_primary;
+			border-color: $color_primary;
+			outline: 0;
+			box-shadow: 0 0 0 0 transparent;
+		}
+	}
+	.navbar-btn-primary {
+		position: absolute;
+		right: 0;
+		top: 5px;
+	}
+	.narbar-collapse-menu {
+		position: static;
+	}
+	main {
+		height: calc(100vh);
+		position: relative;
+		.menu {
+			z-index: 1;
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 57px;
+			width: 100%;
+		}
+		.content {
+			> div {
+				width: 100vw;
+				padding-top: 57px;
+				height: calc(100vh - 57px);
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: center;
+				position: absolute;
+				top: 0;
+				left: 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+			}
+			position: relative;
+			.trang__chu {
+				.trang__chu__detail {
+					text-align: center;
+					img {
+						width: 50%;
+					}
+					.trang__chu__detail__text {
+						p {
+							margin: 0;
+							font-size: 1.2rem;
+							color: $color_primary;
+							font-weight: 600;
+							font-style: italic;
+						}
+					}
+				}
+			}
+			.dat__mua {
+				.dat__mua__detail {
+					width: 80%;
+					.dat__mua__detail__title {
+						p {
+							font-size: 1.2rem;
+							margin: 0;
+						}
+					}
+					.dat__mua__detail__form {
+						label {
+							margin: 0;
+						}
+						.form-group {
+							margin-bottom: 0.5rem;
+							input {
+								border-color: $color_primary;
+							}
+							select {
+								border-color: $color_primary;
+							}
+						}
+						.custom-select-option {
+							width: 100%;
+							display: flex;
+							align-items: center;
+							justify-content: space-between;
+							label {
+								width: 50%;
+							}
+							select {
+								width: 40%;
+								display: inline-block;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.opacity-0 {
+		opacity: 0 !important;
+	}
+}
