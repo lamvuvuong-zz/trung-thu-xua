@@ -1,5 +1,7 @@
 $color_white: #fff;
 $color_primary: #faa92d;
+$color_primary_light: #f9da5b;
+$color_light: #76dde5;
 $color_dark: #d1d3d4;
 
 body {
@@ -8,13 +10,15 @@ body {
 	.navbar {
 		border-bottom: 1px solid $color_dark;
 		background-color: $color_white;
+		padding: 1rem;
 		.navbar-logo {
 			display: inline-block;
 			position: absolute;
 			left: 50%;
-			top: 5px;
+			top: 16px;
 			transform: translateX(-50%);
-			height: 46px;
+			height: 40px;
+			padding: 0.3rem 0;
 			img {
 				height: 100%;
 			}
@@ -29,16 +33,17 @@ body {
 			cursor: pointer;
 			outline: 0;
 			box-shadow: 0 0 0 0 transparent;
-			background-color: $color_primary;
 			border-color: transparent;
 			.navbar-toggler-icon {
-				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='" + $color_white + "' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='" + $color_primary + "' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 			}
 		}
 	}
 	.btn-primary {
 		background-color: $color_primary;
 		border-color: $color_primary;
+		border-radius: 20px;
+		padding: 5px 8px;
 		&:active, &:focus, &:hover {
 			background-color: $color_primary;
 			border-color: $color_primary;
@@ -49,7 +54,7 @@ body {
 	.navbar-btn-primary {
 		position: absolute;
 		right: 0;
-		top: 5px;
+		top: 15px;
 	}
 	.narbar-collapse-menu {
 		position: static;
@@ -62,14 +67,14 @@ body {
 			position: absolute;
 			top: 0;
 			left: 0;
-			height: 57px;
 			width: 100%;
 		}
 		.content {
 			> div {
 				width: 100vw;
-				padding-top: 57px;
-				height: calc(100vh - 57px);
+				margin-top: 73px;
+				height: calc(100vh - 73px);
+				background-image: url('./images/bg-mobile.png');
 				background-repeat: no-repeat;
 				background-size: cover;
 				background-position: center;
@@ -86,14 +91,13 @@ body {
 				.trang__chu__detail {
 					text-align: center;
 					img {
-						width: 50%;
+						width: 40%;
+						margin-bottom: 15px;
 					}
 					.trang__chu__detail__text {
 						p {
 							margin: 0;
 							font-size: 1.2rem;
-							color: $color_primary;
-							font-weight: 600;
 							font-style: italic;
 						}
 					}
@@ -102,19 +106,40 @@ body {
 			.dat__mua {
 				.dat__mua__detail {
 					width: 80%;
+					max-height: 70%;
+					overflow-y: auto;
 					.dat__mua__detail__title {
+						width: 150px;
+						white-space: nowrap;
+						background-color: $color_primary_light;
+						padding: 0.1rem 0;
 						p {
+							font-weight: 600;
 							font-size: 1.2rem;
 							margin: 0;
 						}
+						h3 {
+							font-weight: 900;
+							color: $color_light;
+						}
 					}
 					.dat__mua__detail__form {
+						.dat__mua__detail__form__submit {
+							width: 100%;
+							text-align: center;
+						}
+						form > p {
+							font-weight: 600;
+							margin: 0;
+							text-transform: uppercase;
+						}
 						label {
 							margin: 0;
 						}
 						.form-group {
-							margin-bottom: 0.5rem;
+							margin-bottom: 0.2rem;
 							input {
+								padding: 0.4rem 1rem;
 								border-color: $color_primary;
 							}
 							select {
@@ -127,11 +152,31 @@ body {
 							align-items: center;
 							justify-content: space-between;
 							label {
-								width: 50%;
+								width: 60%;
 							}
 							select {
-								width: 40%;
+								width: 30%;
+								padding: 0.4rem 1rem;
 								display: inline-block;
+							}
+						}
+						.custom-input-total {
+							margin-top: 5px;
+							padding-top: 5px;
+							border-top: 1px solid $color_dark;
+							display: flex;
+							align-items: center;
+							justify-content: space-between;
+							label {
+								width: 50%;
+							}
+							p {
+								margin: 0;
+								font-weight: 600;
+								text-align: right;
+								width: 30%;
+								display: inline-block;
+								color: $color_primary;
 							}
 						}
 					}
@@ -141,5 +186,6 @@ body {
 	}
 	.opacity-0 {
 		opacity: 0 !important;
+		z-index: -1 !important;
 	}
 }
