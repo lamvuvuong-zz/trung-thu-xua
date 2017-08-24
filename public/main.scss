@@ -103,6 +103,38 @@ body {
 					}
 				}
 			}
+			.san__pham {
+				.san__pham__detail {
+					width: 80%;
+					overflow: hidden;
+					img {
+						width: 100%;
+					}
+					p {
+						margin: 0;
+					}
+
+					.san__pham__detail__img__list {
+						width: 100%;
+						display: flex;
+						align-items: center;
+						img {
+							width: 20%;
+						}
+					}
+					.san__pham__detail__title {
+						width: 150px;
+						white-space: nowrap;
+						background-color: $color_primary_light;
+						padding: 0.5rem 0;
+						h3 {
+							margin: 0;
+							font-weight: 900;
+							color: $color_light;
+						}
+					}
+				}
+			}
 			.dat__mua {
 				.dat__mua__detail {
 					width: 80%;
@@ -112,15 +144,25 @@ body {
 						width: 150px;
 						white-space: nowrap;
 						background-color: $color_primary_light;
-						padding: 0.1rem 0;
+						padding: 0.5rem 0;
 						p {
 							font-weight: 600;
 							font-size: 1.2rem;
+							line-height: 1.2rem;
 							margin: 0;
 						}
 						h3 {
+							margin: 0;
 							font-weight: 900;
 							color: $color_light;
+						}
+					}
+					.dat__mua__detail__noti {
+						p {
+							font-weight: 600;
+							font-size: 1.2rem;
+							line-height: 1.2rem;
+							margin: 15px 0;
 						}
 					}
 					.dat__mua__detail__form {
@@ -178,6 +220,56 @@ body {
 								display: inline-block;
 								color: $color_primary;
 							}
+						}
+					}
+				}
+			}
+			.trung__thu__xua {
+				.trung__thu__xua__detail {
+					width: 80%;
+					.trung__thu__xua__detail__img {
+						img {
+							width: 49%;
+							padding: 2px;
+						}
+					}
+					.trung__thu__xua__detail__main {
+						width: 100%;
+						img {
+							width: 30%;
+							vertical-align: top;
+						}
+						p {
+							margin: 0;
+							width: 68%;
+							display: inline-block;
+							text-align: justify;
+						}
+					}
+				}
+			}
+
+			.lien__he {
+				.lien__he__detail {
+					width: 80%;
+					.lien__he__detail__title {
+						width: 150px;
+						white-space: nowrap;
+						background-color: #f9da5b;
+						padding: .1rem 0;
+						p {
+							font-weight: 600;
+							font-size: 1.2rem;
+							margin: 0;
+						}
+						h3 {
+							font-weight: 900;
+							color: $color_light;
+						}
+					}
+					.lien__he__detail__info {
+						a {
+							color: #000;
 						}
 					}
 				}
