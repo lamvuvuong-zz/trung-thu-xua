@@ -68,7 +68,7 @@ body {
 	}
 	main {
 		.active {
-			a {
+			> a {
 				color: $color_primary !important;
 			}
 		}
@@ -432,4 +432,5 @@ body {
 		max-width: 400px;
 	}
 }
+
 

@@ -166,4 +166,18 @@ $('#js-form-dat-mua').submit(function(event) {
 	}
 });
 
-
+$('.san__pham__detail__img__list img').click(function() {
+	var _this = this;
+	var elementMain = $('.san__pham__detail__img > img');
+	if ($(_this).attr('src') === elementMain.attr('src')) {
+		return;
+	}
+	elementMain.animate({
+		opacity: 0.5
+	}, 200, function() {
+		elementMain.attr('src', $(_this).attr('src'));
+		elementMain.animate({
+			opacity: 1
+		}, 200);
+	});
+})
