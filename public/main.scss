@@ -60,6 +60,11 @@ body {
 		position: static;
 	}
 	main {
+		.active {
+			a {
+				color: $color_primary !important;
+			}
+		}
 		height: calc(100vh);
 		position: relative;
 		.menu {
@@ -71,6 +76,7 @@ body {
 		}
 		.content {
 			> div {
+				transition: 0.5s linear;
 				width: 100vw;
 				margin-top: 73px;
 				height: calc(100vh - 73px);
@@ -278,6 +284,5 @@ body {
 	}
 	.opacity-0 {
 		opacity: 0 !important;
-		z-index: -1 !important;
 	}
 }

@@ -7,30 +7,30 @@
 				<a href="#" class="navbar-logo">
 					<img src="./images/chuchoa-logo.png" alt="">
 				</a>
-				<a class="navbar-brand navbar-btn-primary" href="#"><button type="button" class="btn btn-primary">ĐẶT MUA</button></a>
+				<a class="navbar-brand navbar-btn-primary dat-mua-button"  data-target="dat__mua" href="#"><button type="button" class="btn btn-primary">ĐẶT MUA</button></a>
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav mr-auto">
-						<li class="nav-item active">
-							<a class="nav-link" href="#trang-chu">Trang chủ</a>
+						<li class="nav-item">
+							<a class="nav-link trang-chu" data-target="trang__chu" href="#trang-chu">Trang chủ</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#trung-thu-xua">Trung Thu Xưa</a>
+							<a class="nav-link trung-thu-xua" data-target="trung__thu__xua" href="#trung-thu-xua">Trung Thu Xưa</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#san-pham">Sản phẩm</a>
+							<a class="nav-link san-pham" data-target="san__pham" href="#san-pham">Sản phẩm</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#dat-mua">Đặt mua</a>
+							<a class="nav-link dat-mua" data-target="dat__mua" href="#dat-mua">Đặt mua</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#lien-he">Liên hệ</a>
+							<a class="nav-link lien-he" data-target="lien__he" href="#lien-he">Liên hệ</a>
 						</li>
 					</ul>
 				</div>
 			</nav>
 		</div>
 		<div class="content">
-			<div class="trang__chu opacity-0" id="trang-chu">
+			<div class="trang__chu opacity-0" id="js-trang-chu">
 				<div class="trang__chu__detail">
 					<img src="./images/trung-thu-xua-logo.png" alt="">
 					<div class="trang__chu__detail__text">
@@ -41,7 +41,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="trung__thu__xua opacity-0" id="trung-tru-xua">
+			<div class="trung__thu__xua opacity-0" id="js-trung-tru-xua">
 				<div class="trung__thu__xua__detail">
 					<div class="trung__thu__xua__detail__img">
 						<img src="./images/000054.JPG" alt="">
@@ -55,10 +55,10 @@
 					</div>
 				</div>
 			</div>
-			<div class="san__pham" id="san-pham">
+			<div class="san__pham opacity-0" id="js-san-pham">
 				<div class="san__pham__detail">
 					<div class="san__pham__detail__img">
-						<img src="./images/000063.JPG" alt="" id="san-pham-img-main">
+						<img src="./images/000063.JPG" alt="" id="js-san-pham-img-main">
 						<div class="san__pham__detail__img__list">
 							<img src="./images/000063.JPG" alt="">
 							<img src="./images/000063.JPG" alt="">
@@ -77,7 +77,7 @@
 					<p>2 nến</p>
 				</div>
 			</div>
-			<div class="dat__mua opacity-0" id="dat-mua">
+			<div class="dat__mua opacity-0" id="js-dat-mua">
 				<div class="dat__mua__detail" style="display: none">
 					<div class="dat__mua__detail__title">
 						<p>Đăng ký đặt mua bánh</p>
@@ -87,67 +87,52 @@
 						<form>
 							<div class="form-group">
 								<label for="full-name">Họ và tên</label>
-								<input type="text" class="form-control" id="full-name" name="full-name">
+								<input type="text" class="form-control" id="js-full-name" name="full-name">
 							</div>
 							<div class="form-group">
 								<label for="phone-number">Di động</label>
-								<input type="text" class="form-control" id="phone-number" name="phone-number">
+								<input type="text" class="form-control" id="js-phone-number" name="phone-number">
 							</div>
 							<div class="form-group">
 								<label for="email">Email</label>
-								<input type="text" class="form-control" id="email" name="email">
+								<input type="text" class="form-control" id="js-email" name="email">
 							</div>
 							<div class="form-group">
 								<label for="address">Địa chỉ</label>
-								<input type="text" class="form-control" id="address" name="address">
+								<input type="text" class="form-control" id="js-address" name="address">
 							</div>
 							<p>chọn nhân bánh trung thu</p>
 							<div class="form-group custom-select-option">
 								<label for="option-1">Đậu Xanh + Matcha</label>
-								<select class="form-control" name="option-1" id="option-1">
+								<select class="form-control" name="option-1" id="js-option-1">
 									<option value="0" selected="selected">0</option>
 									<option value="1">1</option>
 									<option value="2">2</option>
 									<option value="3">3</option>
 									<option value="4">4</option>
 									<option value="5">5</option>
-									<option value="6">6</option>
-									<option value="7">7</option>
-									<option value="8">8</option>
-									<option value="9">9</option>
-									<option value="10">10</option>
 								</select>
 							</div>
 							<div class="form-group custom-select-option">
 								<label for="option-2">Đậu Xanh + Dừa</label>
-								<select class="form-control" name="option-2" id="option-2">
+								<select class="form-control" name="option-2" id="js-option-2">
 									<option value="0" selected="selected">0</option>
 									<option value="1">1</option>
 									<option value="2">2</option>
 									<option value="3">3</option>
 									<option value="4">4</option>
 									<option value="5">5</option>
-									<option value="6">6</option>
-									<option value="7">7</option>
-									<option value="8">8</option>
-									<option value="9">9</option>
-									<option value="10">10</option>
 								</select>
 							</div>
 							<div class="form-group custom-select-option">
 								<label for="option-3">Đậu Xanh + Khoai Môn</label>
-								<select class="form-control" name="option-3" id="option-3">
+								<select class="form-control" name="option-3" id="js-option-3">
 									<option value="0" selected="selected">0</option>
 									<option value="1">1</option>
 									<option value="2">2</option>
 									<option value="3">3</option>
 									<option value="4">4</option>
 									<option value="5">5</option>
-									<option value="6">6</option>
-									<option value="7">7</option>
-									<option value="8">8</option>
-									<option value="9">9</option>
-									<option value="10">10</option>
 								</select>
 							</div>
 							<div class="form-group custom-input-total">
@@ -174,7 +159,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="lien__he opacity-0" id="lien-he">
+			<div class="lien__he opacity-0" id="js-lien-he">
 				<div class="lien__he__detail">
 					<div class="lien__he__detail__title">
 						<p>Liên hệ đặt mua bánh</p>
@@ -189,6 +174,6 @@
 
 				</div>
 			</div>
-			<!-- <div class="san__pham opacity-0" id="san-pham"></div>
-			<div class="lien__he opacity-0" id="lien-he"></div> -->
+			<!-- <div class="san__pham opacity-0" id="js-san-pham"></div>
+			<div class="lien__he opacity-0" id="js-lien-he"></div> -->
 		</div>
