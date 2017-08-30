@@ -18,6 +18,11 @@ $(window).on('load', function() {
 		$('.trang__chu').removeClass('opacity-0');
 	}
 
+	if (window.screen.width > window.screen.height) {
+		$('.content>div').css({
+			'background-image': 'url(images/background.png)'
+		});
+	}
 });
 
 function actionOpacityElement(_this) {
@@ -63,4 +68,38 @@ $('.dat-mua').click(function() {
 $('.lien-he').click(function() {
 	$('.navbar-toggler').click();
 	actionOpacityElement(this);
+});
+
+$('#js-option-1').change(function() {
+	getTotalPrice();
+})
+
+$('#js-option-2').change(function() {
+	getTotalPrice();
+})
+
+$('#js-option-3').change(function() {
+	getTotalPrice();
+})
+
+function getTotalPrice() {
+	var quantity = parseInt($('#js-option-1').val(), 10) + parseInt($('#js-option-2').val(), 10) + parseInt($('#js-option-3').val(), 10);
+	console.log(quantity);
+	$('.custom-input-total p').html(quantity * 249000 + ' đ');
+}
+
+$('#js-form-dat-mua').submit(function(event) {
+	event.preventDefault();
+	var quantity = parseInt($('#js-option-1').val(), 10) + parseInt($('#js-option-2').val(), 10) + parseInt($('#js-option-3').val(), 10);
+	if (quantity > 0) {
+		$('.dat__mua__detail__form__submit').addClass('opacity-0');
+		var data = $(this).serializeArray().reduce(function(obj, item) {
+			obj[item.name] = item.value;
+			return obj;
+		}, {});
+
+		console.log(data);
+	} else {
+		alert('Vui lòng chọn ít nhất 1 nhân bánh')
+	}
 });

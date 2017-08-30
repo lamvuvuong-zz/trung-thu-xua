@@ -29,9 +29,34 @@
 				</div>
 			</nav>
 		</div>
+		<div class="menu-desktop">
+			<a href="#" class="navbar-logo">
+				<img src="./images/chuchoa-logo.png" alt="">
+			</a>
+			<a class="navbar-brand navbar-btn-primary dat-mua-button"  data-target="dat__mua" href="#"><button type="button" class="btn btn-primary">ĐẶT MUA</button></a>
+		</div>
+		<div class="menu-main-desktop">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item">
+					<a class="nav-link trang-chu" data-target="trang__chu" href="#trang-chu">Trang chủ</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link trung-thu-xua" data-target="trung__thu__xua" href="#trung-thu-xua">Trung Thu Xưa</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link san-pham" data-target="san__pham" href="#san-pham">Sản phẩm</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link dat-mua" data-target="dat__mua" href="#dat-mua">Đặt mua</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link lien-he" data-target="lien__he" href="#lien-he">Liên hệ</a>
+				</li>
+			</ul>
+		</div>
 		<div class="content">
 			<div class="trang__chu opacity-0" id="js-trang-chu">
-				<div class="trang__chu__detail">
+				<div class="trang__chu__detail container">
 					<img src="./images/trung-thu-xua-logo.png" alt="">
 					<div class="trang__chu__detail__text">
 						<p>Trung thu</p>
@@ -42,13 +67,15 @@
 				</div>
 			</div>
 			<div class="trung__thu__xua opacity-0" id="js-trung-tru-xua">
-				<div class="trung__thu__xua__detail">
+				<div class="trung__thu__xua__detail container">
 					<div class="trung__thu__xua__detail__img">
 						<img src="./images/000054.JPG" alt="">
 						<img src="./images/000063.JPG" alt="">
 					</div>
 					<div class="trung__thu__xua__detail__main">
-						<img src="./images/trung-thu-xua-logo.png" alt="">
+						<div class="trung__thu__xua__detail__main__img">
+							<img src="./images/trung-thu-xua-logo.png" alt="">
+						</div>
 						<p>
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo corporis omnis voluptates. Vero quidem fuga earum eum voluptatibus quod iure cumque non, saepe pariatur amet incidunt laboriosam numquam nulla! Necessitatibus.
 						</p>
@@ -56,11 +83,10 @@
 				</div>
 			</div>
 			<div class="san__pham opacity-0" id="js-san-pham">
-				<div class="san__pham__detail">
+				<div class="san__pham__detail container">
 					<div class="san__pham__detail__img">
 						<img src="./images/000063.JPG" alt="" id="js-san-pham-img-main">
 						<div class="san__pham__detail__img__list">
-							<img src="./images/000063.JPG" alt="">
 							<img src="./images/000063.JPG" alt="">
 							<img src="./images/000063.JPG" alt="">
 							<img src="./images/000063.JPG" alt="">
@@ -78,30 +104,29 @@
 				</div>
 			</div>
 			<div class="dat__mua opacity-0" id="js-dat-mua">
-				<div class="dat__mua__detail" style="display: none">
+				<div class="dat__mua__detail container">
 					<div class="dat__mua__detail__title">
 						<p>Đăng ký đặt mua bánh</p>
 						<h3>TRUNG THU XƯA</h3>
 					</div>
 					<div class="dat__mua__detail__form">
-						<form>
+						<form class="form-inline" id="js-form-dat-mua">
 							<div class="form-group">
-								<label for="full-name">Họ và tên</label>
-								<input type="text" class="form-control" id="js-full-name" name="full-name">
+								<label for="full-name">Họ và tên *</label>
+								<input type="text" class="form-control" id="js-full-name" name="full-name" required>
 							</div>
 							<div class="form-group">
-								<label for="phone-number">Di động</label>
-								<input type="text" class="form-control" id="js-phone-number" name="phone-number">
+								<label for="phone-number">Di động *</label>
+								<input type="number" class="form-control" id="js-phone-number" name="phone-number" required>
 							</div>
 							<div class="form-group">
 								<label for="email">Email</label>
-								<input type="text" class="form-control" id="js-email" name="email">
+								<input type="email" class="form-control" id="js-email" name="email">
 							</div>
 							<div class="form-group">
 								<label for="address">Địa chỉ</label>
 								<input type="text" class="form-control" id="js-address" name="address">
 							</div>
-							<p>chọn nhân bánh trung thu</p>
 							<div class="form-group custom-select-option">
 								<label for="option-1">Đậu Xanh + Matcha</label>
 								<select class="form-control" name="option-1" id="js-option-1">
@@ -111,6 +136,11 @@
 									<option value="3">3</option>
 									<option value="4">4</option>
 									<option value="5">5</option>
+									<option value="6">6</option>
+									<option value="7">7</option>
+									<option value="8">8</option>
+									<option value="9">9</option>
+									<option value="10">10</option>
 								</select>
 							</div>
 							<div class="form-group custom-select-option">
@@ -122,6 +152,11 @@
 									<option value="3">3</option>
 									<option value="4">4</option>
 									<option value="5">5</option>
+									<option value="6">6</option>
+									<option value="7">7</option>
+									<option value="8">8</option>
+									<option value="9">9</option>
+									<option value="10">10</option>
 								</select>
 							</div>
 							<div class="form-group custom-select-option">
@@ -133,19 +168,24 @@
 									<option value="3">3</option>
 									<option value="4">4</option>
 									<option value="5">5</option>
+									<option value="6">6</option>
+									<option value="7">7</option>
+									<option value="8">8</option>
+									<option value="9">9</option>
+									<option value="10">10</option>
 								</select>
 							</div>
 							<div class="form-group custom-input-total">
 								<label for="address">Thành tiền</label>
-								<p>1400000 đ</p>
+								<p>0 đ</p>
 							</div>
 							<div class="dat__mua__detail__form__submit">
-								<button type="button" class="btn btn-primary">ĐẶT MUA</button>
+								<button type="submit" class="btn btn-primary">ĐẶT MUA</button>
 							</div>
 						</form>
 					</div>
 				</div>
-				<div class="dat__mua__detail dat__mua__success">
+				<div class="dat__mua__detail container dat__mua__success" style="display: none">
 					<div class="dat__mua__detail__title">
 						<p>Bạn đã đăng ký đặt mua bánh</p>
 						<h3>TRUNG THU XƯA</h3>
@@ -160,7 +200,7 @@
 				</div>
 			</div>
 			<div class="lien__he opacity-0" id="js-lien-he">
-				<div class="lien__he__detail">
+				<div class="lien__he__detail container">
 					<div class="lien__he__detail__title">
 						<p>Liên hệ đặt mua bánh</p>
 						<h3>TRUNG THU XƯA</h3>
