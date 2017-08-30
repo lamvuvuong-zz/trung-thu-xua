@@ -124,6 +124,7 @@ body {
 					}
 					p {
 						margin: 0;
+						display: inline-block;
 					}
 
 					.san__pham__detail__img__list {
@@ -404,7 +405,7 @@ body {
 		}
 	}
 	body main .content .san__pham .san__pham__detail {
-		max-width: 400px;
+		max-width: 600px;
 		.san__pham__detail__img {
 			width: 100%;
 			display: flex;

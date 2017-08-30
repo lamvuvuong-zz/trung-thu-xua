@@ -18,11 +18,11 @@ $(window).on('load', function() {
 		$('.trang__chu').removeClass('opacity-0');
 	}
 
-	if (window.screen.width > window.screen.height) {
-		$('.content>div').css({
-			'background-image': 'url(images/background.png)'
-		});
-	}
+	// if (window.screen.width > window.screen.height) {
+	// 	$('.content>div').css({
+	// 		'background-image': 'url(images/background.png)'
+	// 	});
+	// }
 });
 
 function actionOpacityElement(_this) {
