@@ -1,4 +1,5 @@
 window.elementMain = ['trang__chu', 'trung__thu__xua', 'san__pham', 'dat__mua', 'lien__he'];
+window.elementUrl = ['trang-chu', 'trung-thu-xua', 'san-pham', 'dat-mua', 'lien-he'];
 
 $(window).on('load', function() {
 	if (window.location.href.indexOf('trung-thu-xua') !== -1) {
@@ -18,12 +19,75 @@ $(window).on('load', function() {
 		$('.trang__chu').removeClass('opacity-0');
 	}
 
+	document.addEventListener("mousewheel", MouseWheelHandler(), false);
+    document.addEventListener("DOMMouseScroll", MouseWheelHandler(), false);
+
 	// if (window.screen.width > window.screen.height) {
 	// 	$('.content>div').css({
 	// 		'background-image': 'url(images/background.png)'
 	// 	});
 	// }
 });
+
+
+
+var timer;
+
+function MouseWheelHandler() {
+	return function (e) {
+		// cross-browser wheel delta
+		var e = window.event || e;
+		var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+
+		if ( timer ) clearTimeout(timer);
+
+		timer = setTimeout(function(){
+
+			//scrolling down?
+			if (delta < 0) {
+				actionOpacityWhenScroll(1);
+			}
+			//scrolling up?
+			else {
+				actionOpacityWhenScroll(-1);
+			}
+		}, 200);
+		return false;
+	}
+}
+
+function actionOpacityWhenScroll(next) {
+	var indexChange = -1;
+	for (var i = 0; i < window.elementMain.length; i++) {
+		if (!$('.' + window.elementMain[i]).hasClass('opacity-0')) {
+			switch (next) {
+				case -1:
+					if (i === 0) {
+						indexChange = window.elementMain.length - 1;
+					} else {
+						indexChange = i + next
+					}
+					break;
+				case 1:
+					if (i === window.elementMain.length - 1) {
+						indexChange = 0;
+					} else {
+						indexChange = i + next
+					}
+					break;
+			}
+			$('.' + window.elementMain[i]).addClass('opacity-0');
+			$('.' + window.elementMain[indexChange]).removeClass('opacity-0');
+			window.history.pushState("", "", '/#' + window.elementUrl[indexChange]);
+			$($('.menu-main-desktop ul li')[i]).removeClass('active');
+			$($('.menu-main-desktop ul li')[indexChange]).addClass('active');
+			$($('.menu ul li')[i]).removeClass('active');
+			$($('.menu ul li')[indexChange]).addClass('active');
+
+			break;
+		}
+	}
+}
 
 function actionOpacityElement(_this) {
 
@@ -84,7 +148,6 @@ $('#js-option-3').change(function() {
 
 function getTotalPrice() {
 	var quantity = parseInt($('#js-option-1').val(), 10) + parseInt($('#js-option-2').val(), 10) + parseInt($('#js-option-3').val(), 10);
-	console.log(quantity);
 	$('.custom-input-total p').html(quantity * 249000 + ' đ');
 }
 
@@ -98,8 +161,9 @@ $('#js-form-dat-mua').submit(function(event) {
 			return obj;
 		}, {});
 
-		console.log(data);
 	} else {
 		alert('Vui lòng chọn ít nhất 1 nhân bánh')
 	}
 });
+
+
