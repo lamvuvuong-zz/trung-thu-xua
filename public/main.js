@@ -161,6 +161,19 @@ $('#js-form-dat-mua').submit(function(event) {
 			return obj;
 		}, {});
 
+		$.ajax({
+			type: 'POST',
+			url: '/order',
+			data: data,
+			success: function(resp) {
+				var result = JSON.parse(resp);
+				if (result && result.status == 200) {
+					$('.dat__mua__progress').css('display', 'none');
+					$('.dat__mua__success').css('display', 'block');
+				}
+			}
+		});
+
 	} else {
 		alert('Vui lòng chọn ít nhất 1 nhân bánh')
 	}
