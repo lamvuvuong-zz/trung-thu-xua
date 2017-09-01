@@ -1,0 +1,42 @@
+
+<form id="confirm-order-data">
+	<div class="form-group">
+		<label for="pwd">Password:</label>
+		<input type="password" class="form-control" id="pwd">
+	</div>
+	<button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<div class="container" id="order-data" style="display: none">
+	<h2>Danh sách đặt bánh</h2>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Họ và tên</th>
+				<th>Số điện thoại</th>
+				<th>Email</th>
+				<th>Địa chỉ</th>
+				<th>Đậu xanh + Matcha</th>
+				<th>Đậu xanh + Dừa</th>
+				<th>Đậu xanh + Khoai Môn</th>
+				<th>Tổng tiền</th>
+				<th>Ngày đặt</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each items}}
+			<tr>
+				<td>{{full-name}}</td>
+				<td>{{phone-number}}</td>
+				<td>{{email}}</td>
+				<td>{{address}}</td>
+				<td>{{option-1}}</td>
+				<td>{{option-2}}</td>
+				<td>{{option-3}}</td>
+				<td>{{total-price}}</td>
+				<td>{{created-date}}</td>
+			</tr>
+			{{/each}}
+		</tbody>
+	</table>
+</div>

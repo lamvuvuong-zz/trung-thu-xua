@@ -194,3 +194,12 @@ $('.san__pham__detail__img__list img').click(function() {
 		}, 200);
 	});
 })
+
+
+$('#confirm-order-data').submit(function(event) {
+	event.preventDefault();
+	if ($('#pwd').val() === 'adminttx2017') {
+		$('#confirm-order-data').css('display', 'none');
+		$('#order-data').css('display', 'block');
+	}
+})
