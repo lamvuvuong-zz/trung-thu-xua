@@ -21,8 +21,8 @@ router.post('/order', function(req, res, next) {
 		'option-1': req.body['option-1'],
 		'option-2': req.body['option-2'],
 		'option-3': req.body['option-3'],
-		'created-date': new Date()
-
+		'created-date': new Date(),
+		'total-price': req.body['option-1'] * 249000 + req.body['option-2'] * 249000 + req.body['option-3'] * 249000
 	}
 	mongo.connect(url, function(err, db) {
 		assert.equal(null, err);
