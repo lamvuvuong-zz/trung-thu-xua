@@ -6,6 +6,14 @@ $color_dark: #d1d3d4;
 $color_black: #000;
 
 body {
+	* {
+		font-family: 'SFU Futura';
+		font-style: normal;
+		font-weight: 300;
+	}
+	.btn {
+		font-weight: 300;
+	}
 	.menu-desktop, .menu-main-desktop {
 		display: none;
 	}
@@ -109,8 +117,8 @@ body {
 					.trang__chu__detail__text {
 						p {
 							margin: 0;
-							font-size: 1.2rem;
-							font-style: italic;
+							font-size: 1.6rem;
+							font-family: 'UTM Yen Tu';
 						}
 					}
 				}
@@ -144,6 +152,7 @@ body {
 						h3 {
 							margin: 0;
 							font-weight: 900;
+							letter-spacing: 0.2rem;
 							color: $color_light;
 						}
 					}
@@ -164,10 +173,13 @@ body {
 							font-size: 1.2rem;
 							line-height: 1.2rem;
 							margin: 0;
+							margin-bottom: 0.2rem;
+							
 						}
 						h3 {
 							margin: 0;
 							font-weight: 900;
+							letter-spacing: 0.2rem;
 							color: $color_light;
 						}
 					}
@@ -176,7 +188,9 @@ body {
 							font-weight: 600;
 							font-size: 1.2rem;
 							line-height: 1.2rem;
-							margin: 15px 0;
+							margin: 0;
+							margin-bottom: 0.2rem;
+							
 						}
 					}
 					.dat__mua__detail__form {
@@ -291,9 +305,11 @@ body {
 							font-weight: 600;
 							font-size: 1.2rem;
 							margin: 0;
+							margin-bottom: 0.2rem;
 						}
 						h3 {
 							font-weight: 900;
+							letter-spacing: 0.2rem;
 							color: $color_light;
 						}
 					}
@@ -394,16 +410,17 @@ body {
 				}
 			}
 			a {
-
+				font-family: 'SFU Futura';
+				font-weight: 300;
+				font-style: normal;
 				color: $color_black;
 				font-size: 16px;
-				font-weight: 600;
 			}
 		}
 
 	}
 	body main .content .trang__chu .trang__chu__detail {
-		max-width: 400px;
+		max-width: 450px;
 	}
 	body main .content .trung__thu__xua .trung__thu__xua__detail {
 		max-width: 700px;
@@ -424,6 +441,7 @@ body {
 				}
 			}
 			p {
+				padding: 30px;
 				width: 100%;
 			}
 		}
@@ -450,10 +468,13 @@ body {
 		}
 	}
 	body main .content .lien__he .lien__he__detail {
-		max-width: 400px;
+		max-width: 450px;
 	}
 	body main .content .dat__mua .dat__mua__detail {
-		max-width: 400px;
+		max-width: 450px;
+	}
+	body main .content .trang__chu .trang__chu__detail .trang__chu__detail__text p {
+		font-size: 2rem;
 	}
 }
 
